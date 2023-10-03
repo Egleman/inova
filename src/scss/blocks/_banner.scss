@@ -1,0 +1,205 @@
+.banner {
+  padding: 50px 0;
+  &__wrapper {
+    display: flex;
+    margin-bottom: 150px;
+    gap: 10px;
+  }
+  &__left {
+    max-width: 420px;
+    width: 100%;
+    padding-top: 60px;
+  }
+  &__title {
+    font-size: 65px;
+    letter-spacing: 7.8px;
+    margin-bottom: 15px;
+  }
+  &__subtitle {
+    font-family: Montserrat, sans-serif;
+    font-size: 39px;
+    font-weight: 400;
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+    &_small {
+      font-size: 37px;
+    }
+  }
+  &__description {
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 60px;
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__link {
+    color: #000;
+    font-family: Coda, sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: 1px solid #99969B;
+    background: #FFF;
+    box-shadow: 1px 5px 5px 1px #67716D;
+    transition: .3s all;
+    &:hover {
+      color: #D74141;
+    }
+  }
+  &__right {
+    width: 100%;
+  }
+  &__image {
+    width: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    img {
+      display: flex;
+      flex-shrink: 0;
+      width: 66px;
+    }
+    p {
+      color: #99969B;
+      font-family: Montserrat, sans-serif;
+      font-size: 22px;
+      font-weight: 500;
+    }
+  }
+}
+@media (max-width: 1230px) {
+  .banner {
+    &__left {
+      max-width: 370px;
+    }
+    &__title {
+      font-size: 58px;
+    }
+    &__subtitle {
+      font-size: 34px;
+      &_small {
+        font-size: 32px;
+      }
+    }
+    &__description {
+      font-size: 23px;
+    }
+  }
+}
+@media (max-width: 1022px) {
+  .banner {
+    &__left {
+      max-width: 305px;
+      padding-top: 0;
+    }
+    &__title {
+      font-size: 45px;
+    }
+    &__subtitle {
+      font-size: 28px;
+      &_small {
+        font-size: 26px;
+      }
+    }
+    &__description {
+      font-size: 19px;
+    }
+    &__buttons {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    &__link {
+      width: 195px;
+    }
+    &__card {
+      flex-direction: column;
+      p {
+        margin-top: auto;
+      }
+    }
+  }
+}
+@media (max-width: 798px) {
+  .banner {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__left {
+      max-width: 100%;
+    }
+    &__buttons {
+      flex-direction: row;
+      flex-wrap: wrap;
+      max-width: 365px;
+    }
+    &__link {
+      width: auto;
+    }
+  }
+}
+@media (max-width: 650px) {
+  .banner {
+    padding: 50px 0 25px 0;
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    &__card {
+      flex-direction: row;
+      justify-content: flex-start;
+      p {
+        margin-top: initial;
+      }
+    }
+  }
+}
+@media (max-width: 606px) {
+  .banner {
+    &__wrapper {
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    &__subtitle {
+      &:last-of-type {
+        margin-bottom: 20px;
+      }
+    }
+    &__description {
+      margin-bottom: 30px;
+    }
+  }
+}
+@media (max-width: 415px) {
+  .banner {
+    &__buttons {
+      max-width: 100%;
+    }
+    &__link {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.accordion {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.2s all;
+  background: #000;
+  padding: 0;
+  display: none;
+}
+@media (max-width: 798px) {
+  .accordion {
+    display: block;
+  }
+}

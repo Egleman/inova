@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Arial";
+  font-display: swap;
+  src: url("../fonts/Arial-regular.woff2") format("woff2"), url("../fonts/Arial-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arial-MT";
+  font-display: swap;
+  src: url("../fonts/Arial-mt.woff2") format("woff2"), url("../fonts/Arial-mt.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Calibri";
+  font-display: swap;
+  src: url("../fonts/Calibri-bold.woff2") format("woff2"), url("../fonts/Calibri-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Coda";
+  font-display: swap;
+  src: url("../fonts/Coda-Caption-Extra-Bold.woff2") format("woff2"), url("../fonts/Coda-Caption-Extra-Bold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
