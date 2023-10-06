@@ -4,14 +4,14 @@
         position: relative;
     }
     &__title {
-        font-family: Calibri, sans-serif;
-        font-size: 45px;
-        margin-bottom: 10px;
+        //font-family: Calibri, sans-serif;
+        font-size: 35px;
         font-weight: 700;
+        margin-bottom: 10px;
     }
     &__text {
-        font-family: Calibri, sans-serif;
-        font-size: 25px;
+        //font-family: Calibri, sans-serif;
+        font-size: 22px;
         margin-bottom: 20px;
         font-weight: 400;
     }
@@ -25,7 +25,7 @@
         }
         &-title {
             p {
-                font-family: Calibri, sans-serif;
+                //font-family: Calibri, sans-serif;
                 font-size: 30px;
                 white-space: nowrap;
             }
@@ -41,8 +41,8 @@
                 height: 8px;
             }
             p {
-                font-family: Calibri, sans-serif;
-                font-size: 25px;
+                //font-family: Calibri, sans-serif;
+                font-size: 22px;
             }
         }
         &-images {

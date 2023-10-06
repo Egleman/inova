@@ -1,8 +1,9 @@
 .video {
     padding: 50px 0;
+    display: none;
     &__title {
         margin-bottom: 20px;
-        font-family: Calibri, sans-serif;
+        //font-family: Calibri, sans-serif;
         font-size: 45px;
         font-weight: 700;
     }

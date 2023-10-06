@@ -1,3 +1,6 @@
+import inputmask from "inputmask";
+
+
 //Проверка поддержки webp, добавление класса webp или no-webp для html
 export const isWebp = () => {
     function testWebP(callback) {
@@ -31,89 +34,7 @@ export const calcWidthScroll = () => {
 
         div.remove();
         document.body.style.minWidth = (320 - scrollWidth) + 'px';
-}
-//Самописный аккордеон
-export const accordion = () => {
-    class ItcAccordion {
-        constructor(target, config) {
-          this._el = typeof target === 'string' ? document.querySelector(target) : target;
-          const defaultConfig = {
-            alwaysOpen: true,
-            duration: 350
-          };
-          this._config = Object.assign(defaultConfig, config);
-          this.addEventListener();
-        }
-        addEventListener() {
-          this._el.addEventListener('click', (e) => {
-            const elHeader = e.target.closest('.accordion__header');
-            if (!elHeader) {
-              return;
-            }
-            if (!this._config.alwaysOpen) {
-              const elOpenItem = this._el.querySelector('.accordion__item_show');
-              if (elOpenItem) {
-                elOpenItem !== elHeader.parentElement ? this.toggle(elOpenItem) : null;
-              }
-            }
-            this.toggle(elHeader.parentElement);
-          });
-        }
-        show(el) {
-          const elBody = el.querySelector('.accordion__body');
-          if (elBody.classList.contains('collapsing') || el.classList.contains('accordion__item_show')) {
-            return;
-          }
-          elBody.style['display'] = 'block';
-          const height = elBody.offsetHeight;
-          elBody.style['height'] = 0;
-          elBody.style['overflow'] = 'hidden';
-          elBody.style['transition'] = `height ${this._config.duration}ms ease`;
-          elBody.classList.add('collapsing');
-          el.classList.add('accordion__item_slidedown');
-          elBody.offsetHeight;
-          elBody.style['height'] = `${height}px`;
-          window.setTimeout(() => {
-            elBody.classList.remove('collapsing');
-            el.classList.remove('accordion__item_slidedown');
-            elBody.classList.add('collapse');
-            el.classList.add('accordion__item_show');
-            elBody.style['display'] = '';
-            elBody.style['height'] = '';
-            elBody.style['transition'] = '';
-            elBody.style['overflow'] = '';
-          }, this._config.duration);
-        }
-        hide(el) {
-          const elBody = el.querySelector('.accordion__body');
-          if (elBody.classList.contains('collapsing') || !el.classList.contains('accordion__item_show')) {
-            return;
-          }
-          elBody.style['height'] = `${elBody.offsetHeight}px`;
-          elBody.offsetHeight;
-          elBody.style['display'] = 'block';
-          elBody.style['height'] = 0;
-          elBody.style['overflow'] = 'hidden';
-          elBody.style['transition'] = `height ${this._config.duration}ms ease`;
-          elBody.classList.remove('collapse');
-          el.classList.remove('accordion__item_show');
-          elBody.classList.add('collapsing');
-          window.setTimeout(() => {
-            elBody.classList.remove('collapsing');
-            elBody.classList.add('collapse');
-            elBody.style['display'] = '';
-            elBody.style['height'] = '';
-            elBody.style['transition'] = '';
-            elBody.style['overflow'] = '';
-          }, this._config.duration);
-        }
-        toggle(el) {
-          el.classList.contains('accordion__item_show') ? this.hide(el) : this.show(el);
-        }
-      }
-      new ItcAccordion(document.querySelector('.accordion'), {
-        alwaysOpen: false
-      });
+        return scrollWidth;
 }
 //Открытие модальных окон
 export const openModal = () => {
@@ -121,7 +42,8 @@ export const openModal = () => {
     const buttonsClose = document.querySelectorAll('[data-close]');
 
     buttonsClose.forEach(close => {
-        close.addEventListener('click', () => {
+        close.addEventListener('click', (e) => {
+            e.preventDefault();
             const overlays = document.querySelectorAll('.overlay');
             overlays.forEach(over => {
                 if (over.classList.contains('overlay_active')) {
@@ -143,4 +65,75 @@ export const openModal = () => {
         })
     })
 }
-//Маска телефона для инпутов
+
+export const scrollLinks = () => {
+    const links = document.querySelectorAll('a[data-link="scroll"]');
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const blockId = link.getAttribute('data-block');
+            if (document.querySelector(blockId)) {
+                document.querySelector(blockId).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            } else {
+                window.location = link.getAttribute('href').slice(0, 1);
+            }
+        })
+    })
+}
+
+export const sliders = () => {
+    if (document.querySelector('.overlay-img')) {
+        const certificates = new Swiper('.swiper-certificates', {
+            loop: true,
+            allowTouchMove: true,
+            autoHeight: true,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.button_next',
+                prevEl: '.button_prev',
+            },
+        });
+        const links = document.querySelectorAll('.certificates__card');
+        const closeBtn = document.querySelector('.overlay-img > a.close');
+        const modal = document.querySelector('.overlay-img');
+        const html = document.querySelector('html');
+        closeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                html.style.overflowY = 'initial';
+                html.style.paddingRight = `0`;
+            }
+        })
+        links.forEach((link, index) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('active');
+                html.style.overflowY = 'hidden';
+                html.style.paddingRight = `${calcWidthScroll()}px`
+                certificates.slideTo(index, 1);
+
+            })
+        })
+    }
+}
+
+export const maskedInputs = () => {
+    if (document.querySelectorAll('input[data-input="masked"]')) {
+        const inputs = document.querySelectorAll('input[data-input="masked"]');
+        inputs.forEach(input => {
+            const im = new window.Inputmask({
+                mask: '+7 (999) 999-99-99',
+                showMaskOnHover: false,
+                showMaskOnFocus: false,
+                jitMasking: true,
+                inputmode: 'tel'
+            })
+            im.mask(input);
+        })
+
+    }
+}

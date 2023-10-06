@@ -1,12 +1,16 @@
 import * as flsFunction from "./modules/function.js";
 import smoothscroll from 'smoothscroll-polyfill';
+// import {openModal, scrollLinks, sliders} from "./modules/function.js";
 const btn = document.querySelector('.header__burger');
 const acc = document.querySelector('.accordion');
-const elems = document.querySelectorAll('.supplier__image');
+
 
 flsFunction.isWebp();
 flsFunction.calcWidthScroll();
-
+flsFunction.scrollLinks();
+flsFunction.sliders();
+flsFunction.openModal();
+flsFunction.maskedInputs();
 smoothscroll.polyfill();
 
 btn.addEventListener('click', (e) => {
@@ -19,29 +23,3 @@ btn.addEventListener('click', (e) => {
         acc.style.padding = '15px 0'
     }
 })
-
-
-const options = {
-    // родитель целевого элемента - область просмотра
-    root: null,
-    // без отступов
-    rootMargin: '0px',
-    // процент пересечения - половина изображения
-    threshold: 0.5
-}
-
-// Создаем новый observer (наблюдатель)
-const observer = new IntersectionObserver(function (entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate__rollIn');
-        }
-    }, options);
-});
-
-
-if (window.innerWidth > 1022) {
-    elems.forEach(el => {
-        observer.observe(el);
-    })
-}

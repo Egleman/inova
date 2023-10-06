@@ -3,15 +3,17 @@
     &__wrapper {
         position: relative;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
     }
     &__card {
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.1);
+        border-radius: 15px;
         &-image {
             border-radius: 15px;
-            border: 1px solid #99969B;
+            //border: 1px solid #99969B;
             overflow: hidden;
-            height: 585px;
+            height: 285px;
             img {
                 width: 100%;
                 height: 100%;
@@ -19,7 +21,7 @@
             }
         }
         &-body {
-            padding: 15px;
+            padding: 15px 15px 20px 15px;
             box-sizing: border-box;
             display: flex;
             align-items: center;
@@ -28,43 +30,91 @@
         }
         &-title {
             color: #000;
-            font-family: Coda, sans-serif;
-            font-size: 45px;
+            //font-family: Coda, sans-serif;
+            font-size: 25px;
+            font-weight: 800;
             text-align: center;
             margin-bottom: 20px;
         }
         &-btn {
+            //display: flex;
+            //align-items: center;
+            //justify-content: center;
+            //border-radius: 15px;
+            //border: 1px solid #99969B;
+            //background: #FFF;
+            //box-shadow: 0px 10px 10px 0px #99969B;
+            //color: #000;
+            //font-family: Coda, sans-serif;
+            //font-size: 30px;
+            //padding: 10px 30px;
+            //transition: .3s all;
+            //max-width: 350px;
+            //width: 100%;
+            //&:hover {
+            //    background: #f4f4f4;
+            //}
+            color: #000;
+            //font-family: Coda, sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 600;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 15px;
-            border: 1px solid #99969B;
-            background: #FFF;
-            box-shadow: 0px 10px 10px 0px #99969B;
-            color: #000;
-            font-family: Coda, sans-serif;
-            font-size: 30px;
-            padding: 10px 30px;
+            //padding: 10px 30px;
+            border-radius: 4px;
+            width: 192px;
+            height: 46px;
+            //border: 1px solid #99969B;
+            //background: #FFF;
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.34);
             transition: .3s all;
-            max-width: 350px;
-            width: 100%;
+            background: #fff;
+            color: #000;
             &:hover {
                 background: #f4f4f4;
             }
+            //&_red {
+            //    background: #e00000;
+            //    color: #fff;
+            //    &:hover {
+            //        background: #ff4e4e;
+            //    }
+            //}
+            //&_white {
+            //    background: #fff;
+            //    color: #000;
+            //    &:hover {
+            //        background: #f4f4f4;
+            //    }
+            //}
         }
     }
 }
 @media (max-width: 1022px) {
     .shop {
         &__wrapper {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
         }
         &__card {
-            &-title {
-                font-size: 35px;
+            &-image {
+                height: 475px;
             }
-            &-btn {
-                font-size: 25px;
+            //&-title {
+            //    font-size: 35px;
+            //}
+            //&-btn {
+            //    font-size: 25px;
+            //}
+        }
+    }
+}
+@media (max-width: 798px) {
+    .shop {
+        &__card {
+            &-image {
+                height: 340px;
             }
         }
     }
@@ -72,17 +122,20 @@
 @media (max-width: 606px) {
     .shop {
         padding: 25px 0px;
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
         &__card {
             &-image {
                 height: 350px;
             }
-            &-title {
-                font-size: 30px;
-            }
-            &-btn {
-                font-size: 22px;
-                max-width: 250px;
-            }
+            //&-title {
+            //    font-size: 30px;
+            //}
+            //&-btn {
+            //    font-size: 22px;
+            //    max-width: 250px;
+            //}
         }
     }
 }
@@ -91,7 +144,7 @@
         padding: 25px 0px;
         &__card {
             &-image {
-                height: 300px;
+                height: 250px;
             }
             &-title {
                 font-size: 26px;

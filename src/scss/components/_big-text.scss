@@ -1,20 +1,20 @@
 .big-text {
   position: absolute;
   color: #DFDEDE;
-  font-family: Coda, sans-serif;
+  //font-family: Coda, sans-serif;
   font-size: 165px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
   transform: rotate(-90deg);
-  left: -390px;
-  top: 150px;
+  left: -330px;
+  top: 160px;
   &_info {
-    left: -305px;
-    top: 135px;
+    left: -260px;
+    top: 90px;
   }
   &_shop {
-    left: -355px;
-    top: 205px;
+    left: -300px;
+    top: 90px;
   }
 }

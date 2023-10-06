@@ -1,6 +1,7 @@
 .simple-block {
     background: #f4f4f4;
-    margin: 50px 0px;
+    margin: 50px 0;
+    display: none;
     &__wrapper {
         height: 180px;
         margin: 0 auto;

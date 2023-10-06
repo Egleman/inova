@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
     <title>Главная</title>
 </head>
@@ -25,10 +26,10 @@
             </a>
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__list-item"><a href="#" class="header__list-link">Главная</a></li>
-                    <li class="header__list-item"><a href="#" class="header__list-link">Каталог</a></li>
-                    <li class="header__list-item"><a href="#" class="header__list-link">Сертификаты</a></li>
-                    <li class="header__list-item"><a href="#" class="header__list-link">Контакты</a></li>
+                    <li class="header__list-item"><a href="/index.html" class="header__list-link">Главная</a></li>
+                    <li class="header__list-item"><a href="/index.html" data-link="scroll" data-block="#shop" class="header__list-link">Каталог</a></li>
+                    <li class="header__list-item"><a href="/certificates.html" class="header__list-link">Сертификаты</a></li>
+                    <li class="header__list-item"><a href="/contacts.html" class="header__list-link">Контакты</a></li>
                 </ul>
             </nav>
             <a href="#" class="header__burger">
@@ -41,10 +42,10 @@
     <div class="accordion">
         <div class="container">
             <ul class="header__list">
-                <li class="header__list-item"><a href="#" class="header__list-link">Главная</a></li>
-                <li class="header__list-item"><a href="#" class="header__list-link">Каталог</a></li>
-                <li class="header__list-item"><a href="#" class="header__list-link">Сертификаты</a></li>
-                <li class="header__list-item"><a href="#" class="header__list-link">Контакты</a></li>
+                <li class="header__list-item"><a href="/index.html" class="header__list-link">Главная</a></li>
+                <li class="header__list-item"><a href="/index.html" data-link="scroll" data-block="#shop" class="header__list-link">Каталог</a></li>
+                <li class="header__list-item"><a href="/certificates.html" class="header__list-link">Сертификаты</a></li>
+                <li class="header__list-item"><a href="/contacts.html" class="header__list-link">Контакты</a></li>
             </ul>
         </div>
     </div>
@@ -60,8 +61,8 @@
                         <h3 class="banner__subtitle banner__subtitle_small">ТВЕРДЫЙ БЛАСТИНГ</h3>
                         <h4 class="banner__description">ПОРОШКИ ДЛЯ НАПЫЛЕНИЯ</h4>
                         <div class="banner__buttons">
-                            <a href="#" class="banner__link">ЗАКАЗАТЬ</a>
-                            <a href="#" class="banner__link">КАТАЛОГ</a>
+                            <a href="#" class="banner__link banner__link_red">ЗАКАЗАТЬ</a>
+                            <a href="#" class="banner__link banner__link_white" data-link="scroll" data-block="#shop">КАТАЛОГ</a>
                         </div>
                     </div>
                     <div class="banner__right">
@@ -70,43 +71,137 @@
                         </div>
                     </div>
                 </div>
-                <div class="banner__icons">
+            </div>
+            <div class="banner__icons">
+                <div class="container">
                     <div class="banner__grid">
                         <div class="banner__card">
-                            <picture><source srcset="./img/banner-1.webp" type="image/webp"><img src="./img/banner-1.png" alt="icon"></picture>
+                            <div>
+                                <picture><source srcset="./img/banner-1-1.webp" type="image/webp"><img src="./img/banner-1-1.png" alt="icon" class="img-1"></picture>
+                            </div>
                             <p>С 2007 года</p>
                         </div>
                         <div class="banner__card">
-                            <picture><source srcset="./img/banner-2.webp" type="image/webp"><img src="./img/banner-2.png" alt="icon"></picture>
+                            <div>
+                                <picture><source srcset="./img/banner-2-2.webp" type="image/webp"><img src="./img/banner-2-2.png" alt="icon" class="img-2"></picture>
+                            </div>
                             <p>Доставка по РФ</p>
                         </div>
                         <div class="banner__card">
-                            <picture><source srcset="./img/banner-3.webp" type="image/webp"><img src="./img/banner-3.png" alt="icon"></picture>
+                            <div>
+                                <picture><source srcset="./img/banner-3-3.webp" type="image/webp"><img src="./img/banner-3-3.png" alt="icon" class="img-3"></picture>
+                            </div>
                             <p>> 1000 клиентов</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="media">
+        <section id="shop" class="shop">
             <div class="container">
-                <div class="media__grid">
-                    <div class="media__image media__image_small">
-                        <picture><source srcset="./img/media-1.webp" type="image/webp"><img src="./img/media-1.png" alt="media"></picture>
+                <div class="shop__wrapper">
+                    <div class="shop__card">
+                        <div class="shop__card-image">
+                            <picture><source srcset="./img/shop/1.webp" type="image/webp"><img src="./img/shop/1.jpg" alt="shop-img"></picture>
+                        </div>
+                        <div class="shop__card-body">
+                            <p class="shop__card-title">UHDO</p>
+                            <a href="#" class="shop__card-btn" data-toggle="#modal-callback">ЗАКАЗАТЬ</a>
+                        </div>
                     </div>
-                    <div class="media__image media__image_small">
-                        <picture><source srcset="./img/media-2.webp" type="image/webp"><img src="./img/media-2.png" alt="media"></picture>
+                    <div class="shop__card">
+                        <div class="shop__card-image">
+                            <picture><source srcset="./img/shop/fish.webp" type="image/webp"><img src="./img/shop/fish.jpg" alt="shop-img"></picture>
+                        </div>
+                        <div class="shop__card-body">
+                            <p class="shop__card-title">ARMEX Standard</p>
+                            <a href="#" class="shop__card-btn" data-toggle="#modal-callback">ЗАКАЗАТЬ</a>
+                        </div>
                     </div>
-                    <div class="media__image media__image_small">
-                        <picture><source srcset="./img/media-3.webp" type="image/webp"><img src="./img/media-3.png" alt="media"></picture>
+                    <div class="shop__card">
+                        <div class="shop__card-image">
+                            <picture><source srcset="./img/shop/fish.webp" type="image/webp"><img src="./img/shop/fish.jpg" alt="shop-img"></picture>
+                        </div>
+                        <div class="shop__card-body">
+                            <p class="shop__card-title">Eco Soft Blast</p>
+                            <a href="#" class="shop__card-btn" data-toggle="#modal-callback">ЗАКАЗАТЬ</a>
+                        </div>
                     </div>
-                    <div class="media__image media__image_small">
-                        <picture><source srcset="./img/media-4.webp" type="image/webp"><img src="./img/media-4.png" alt="media"></picture>
+                    <div class="shop__card">
+                        <div class="shop__card-image">
+                            <picture><source srcset="./img/shop/4.webp" type="image/webp"><img src="./img/shop/4.png" alt="shop-img"></picture>
+                        </div>
+                        <div class="shop__card-body">
+                            <p class="shop__card-title">Garnet</p>
+                            <a href="#" class="shop__card-btn" data-toggle="#modal-callback">ЗАКАЗАТЬ</a>
+                        </div>
                     </div>
-                    <div class="media__image media__image_big">
-                        <picture><source srcset="./img/media-5.webp" type="image/webp"><img src="./img/media-5.png" alt="media"></picture>
+
+                    <div class="shop__card">
+                        <div class="shop__card-image">
+                            <picture><source srcset="./img/shop/5.webp" type="image/webp"><img src="./img/shop/5.jpg" alt="shop-img"></picture>
+                        </div>
+                        <div class="shop__card-body">
+                            <p class="shop__card-title">Sponge Silver 30</p>
+                            <a href="#" class="shop__card-btn" data-toggle="#modal-callback">ЗАКАЗАТЬ</a>
+                        </div>
                     </div>
-                    <p class="big-text">MEDIA</p>
+                    <div class="shop__card">
+                        <div class="shop__card-image">
+                            <picture><source srcset="./img/shop/6.webp" type="image/webp"><img src="./img/shop/6.jpg" alt="shop-img"></picture>
+                        </div>
+                        <div class="shop__card-body">
+                            <p class="shop__card-title">Sponge Silver 60</p>
+                            <a href="#" class="shop__card-btn" data-toggle="#modal-callback">ЗАКАЗАТЬ</a>
+                        </div>
+                    </div>
+                    <div class="shop__card">
+                        <div class="shop__card-image">
+                            <picture><source srcset="./img/shop/7.webp" type="image/webp"><img src="./img/shop/7.jpg" alt="shop-img"></picture>
+                        </div>
+                        <div class="shop__card-body">
+                            <p class="shop__card-title">Sponge Silver 80</p>
+                            <a href="#" class="shop__card-btn" data-toggle="#modal-callback">ЗАКАЗАТЬ</a>
+                        </div>
+                    </div>
+                    <div class="shop__card">
+                        <div class="shop__card-image">
+                            <picture><source srcset="./img/shop/fish.webp" type="image/webp"><img src="./img/shop/fish.jpg" alt="shop-img"></picture>
+                        </div>
+                        <div class="shop__card-body">
+                            <p class="shop__card-title">Sponge Green</p>
+                            <a href="#" class="shop__card-btn" data-toggle="#modal-callback">ЗАКАЗАТЬ</a>
+                        </div>
+                    </div>
+
+                    <div class="shop__card">
+                        <div class="shop__card-image">
+                            <picture><source srcset="./img/shop/9.webp" type="image/webp"><img src="./img/shop/9.jpg" alt="shop-img"></picture>
+                        </div>
+                        <div class="shop__card-body">
+                            <p class="shop__card-title">Stellite 6</p>
+                            <a href="#" class="shop__card-btn" data-toggle="#modal-callback">ЗАКАЗАТЬ</a>
+                        </div>
+                    </div>
+                    <div class="shop__card">
+                        <div class="shop__card-image">
+                            <picture><source srcset="./img/shop/9.webp" type="image/webp"><img src="./img/shop/9.jpg" alt="shop-img"></picture>
+                        </div>
+                        <div class="shop__card-body">
+                            <p class="shop__card-title">Stellite 12</p>
+                            <a href="#" class="shop__card-btn" data-toggle="#modal-callback">ЗАКАЗАТЬ</a>
+                        </div>
+                    </div>
+                    <div class="shop__card">
+                        <div class="shop__card-image">
+                            <picture><source srcset="./img/shop/9.webp" type="image/webp"><img src="./img/shop/9.jpg" alt="shop-img"></picture>
+                        </div>
+                        <div class="shop__card-body">
+                            <p class="shop__card-title">Stellite</p>
+                            <a href="#" class="shop__card-btn" data-toggle="#modal-callback">ЗАКАЗАТЬ</a>
+                        </div>
+                    </div>
+                    <p class="big-text big-text_shop">SHOP</p>
                 </div>
             </div>
         </section>
@@ -118,7 +213,7 @@
                         Особый способ очистки любых поверхностей с использованием современных мягких абразивных материалов, которые не наносят повреждения поверхности.
                     </p>
                     <p class="soft__text">
-                        Эта технология используется в любой отрасли промышленности, на производствах, для реставрации, деликатной очистки и подготовки поверхностей: 
+                        Эта технология используется в любой отрасли промышленности, на производствах, для реставрации, деликатной очистки и подготовки поверхностей:
                         стекла, металла, дерева, пластмасс, камня и т. д.
                     </p>
                     <div class="soft__advantages">
@@ -175,134 +270,25 @@
                 </div>
             </div>
         </section>
-        <section class="shop">
+        <section class="media">
             <div class="container">
-                <div class="shop__wrapper">
-                    <div class="shop__card">
-                        <div class="shop__card-image">
-                            <picture><source srcset="./img/shop-1.webp" type="image/webp"><img src="./img/shop-1.png" alt="shop-img"></picture>
-                        </div>
-                        <div class="shop__card-body">
-                            <p class="shop__card-title">UHDO Standard</p>
-                            <a href="#" class="shop__card-btn">ЗАКАЗАТЬ</a>
-                        </div>
+                <div class="media__grid">
+                    <div class="media__image media__image_small">
+                        <picture><source srcset="./img/media-1.webp" type="image/webp"><img src="./img/media-1.png" alt="media"></picture>
                     </div>
-                    <div class="shop__card">
-                        <div class="shop__card-image">
-                            <picture><source srcset="./img/shop-2.webp" type="image/webp"><img src="./img/shop-2.png" alt="shop-img"></picture>
-                        </div>
-                        <div class="shop__card-body">
-                            <p class="shop__card-title">Soda SBS</p>
-                            <a href="#" class="shop__card-btn">ЗАКАЗАТЬ</a>
-                        </div>
+                    <div class="media__image media__image_small">
+                        <picture><source srcset="./img/media-2.webp" type="image/webp"><img src="./img/media-2.png" alt="media"></picture>
                     </div>
-                    <p class="big-text big-text_shop">SHOP</p>
-                </div>
-            </div>
-        </section>
-        <section class="shop">
-            <div class="container">
-                <div class="shop__wrapper">
-                    <div class="shop__card">
-                        <div class="shop__card-image">
-                            <picture><source srcset="./img/shop-3.webp" type="image/webp"><img src="./img/shop-3.png" alt="shop-img"></picture>
-                        </div>
-                        <div class="shop__card-body">
-                            <p class="shop__card-title">GMA Garnet</p>
-                            <a href="#" class="shop__card-btn">ЗАКАЗАТЬ</a>
-                        </div>
+                    <div class="media__image media__image_small">
+                        <picture><source srcset="./img/media-3.webp" type="image/webp"><img src="./img/media-3.png" alt="media"></picture>
                     </div>
-                    <div class="shop__card">
-                        <div class="shop__card-image">
-                            <picture><source srcset="./img/shop-4.webp" type="image/webp"><img src="./img/shop-4.png" alt="shop-img"></picture>
-                        </div>
-                        <div class="shop__card-body">
-                            <p class="shop__card-title">Sponge Media</p>
-                            <a href="#" class="shop__card-btn">ЗАКАЗАТЬ</a>
-                        </div>
+                    <div class="media__image media__image_small">
+                        <picture><source srcset="./img/media-4.webp" type="image/webp"><img src="./img/media-4.png" alt="media"></picture>
                     </div>
-                    <p class="big-text big-text_shop">SHOP</p>
-                </div>
-            </div>
-        </section>
-        <section class="simple-block">
-            <div class="container">
-                <div class="simple-block__wrapper">
-                    <p>An alternative for city-based families with children who need means of transportation for getting groceries, dropping kids off at kindergarden and going to work in the local area.</p>
-                    <p>~ Per Munch, Politiken</p>
-                </div>
-            </div>
-        </section>
-        <section class="supplier">
-            <div class="container">
-                <div class="supplier__wrapper">
-                    <div class="supplier__left">
-                        <p class="supplier__title">SUPPLIER FOR THE DANISH POST SERVICE</p>
-                        <p class="supplier__subtitle">
-                            In 2011, the danish mail service (Post Danmark) chose us to produce 1600 cargo bikes for their postmen.
-                        </p>
-                        <p class="supplier__subtitle">Today, 80% of their bike-fleet consists of our bikes.</p>
-                        <picture><source srcset="./img/supplier-mini.webp" type="image/webp"><img class="supplier__mini" src="./img/supplier-mini.png" alt="supplier"></picture>
+                    <div class="media__image media__image_big">
+                        <picture><source srcset="./img/media-5.webp" type="image/webp"><img src="./img/media-5.png" alt="media"></picture>
                     </div>
-                    <div class="supplier__right">
-                        <div class="supplier__image animate__animated">
-                            <picture><source srcset="./img/supplier-big.webp" type="image/webp"><img src="./img/supplier-big.jpg" alt="supplier-big"></picture>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="supplier poligon">
-            <div class="container">
-                <div class="supplier__wrapper supplier__wrapper_reverse">
-                    <div class="supplier__right">
-                        <div class="supplier__image animate__animated">
-                            <picture><source srcset="./img/supplier-big2.webp" type="image/webp"><img src="./img/supplier-big2.jpg" alt="supplier-big"></picture>
-                        </div>
-                    </div>
-                    <div class="supplier__left">
-                        <p class="supplier__title">AWARD-WINNING DURABILITY</p>
-                        <p class="supplier__subtitle">
-                            All of our post bikes are still used today by Post Nord (formely Post Danmark) after 250.000 starts and stops.
-                        </p>
-                        <picture><source srcset="./img/supplier-mini2.webp" type="image/webp"><img class="supplier__mini" src="./img/supplier-mini2.png" alt="supplier"></picture>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="supplier">
-            <div class="container">
-                <div class="supplier__wrapper">
-                    <div class="supplier__left">
-                        <p class="supplier__title">THE NIHOLA POST STAMP</p>
-                        <p class="supplier__subtitle">
-                            In 2011, our mail bikes were honored with their own stamp by Post Danmark.
-                        </p>
-                    </div>
-                    <div class="supplier__right">
-                        <div class="supplier__image animate__animated">
-                            <picture><source srcset="./img/supplier-big3.webp" type="image/webp"><img src="./img/supplier-big3.png" alt="supplier-big"></picture>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="video">
-            <div class="container">
-                <p class="video__title">WATCH THE INOVA POST BIKE STORY</p>
-                
-                <div class="video__block">
-                    <iframe 
-                        class="elementor-video" 
-                        frameborder="0" 
-                        allowfullscreen="1" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        title="Danish Post bike" 
-                        width="640" 
-                        height="360" 
-                        src="https://www.youtube.com/embed/Zjb3Qn0hTRo?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1&origin=https%3A%2F%2Fnihola.com&widgetid=1" 
-                        id="widget2">
-                    </iframe>
+                    <p class="big-text">MEDIA</p>
                 </div>
             </div>
         </section>
@@ -312,85 +298,79 @@
         <div class="footer__wrapper">
             <div class="footer__grid">
                 <div class="footer__column">
-                    <p class="footer__column-title">Contact Info</p>
+                    <p class="footer__column-title">Наши контакты:</p>
                     <ul class="footer__list">
                         <li class="footer__list-item">
-                            <p class="footer__list-text">Nihola Cykler</p>
+                            <p class="footer__list-text">г. Зеленоград</p>
                         </li>
                         <li class="footer__list-item">
-                            <p class="footer__list-text">Kastanjevej 7</p>
+                            <p class="footer__list-text">ул. Заводская 21а</p>
                         </li>
                         <li class="footer__list-item">
-                            <p class="footer__list-text">4060 Kirke Såby</p>
-                        </li>
-                        <li class="footer__list-item">
-                            <p class="footer__list-text">Phone: +45 33227905</p>
-                        </li>
-                        <li class="footer__list-item">
-                            <p class="footer__list-text">CVR-nr: 21120537</p>
+                            <a href="tel:79262207982" class="footer__list-link">Телефон: +7 (926) 220-79-82</a>
                         </li>
                     </ul>
                 </div>
                 <div class="footer__column">
-                    <p class="footer__column-title">Information</p>
+                    <p class="footer__column-title">Навигация</p>
                     <ul class="footer__list">
                         <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">About us</a>
+                            <a href="/index.html" class="footer__list-link">Главная</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Manuals</a>
+                            <a href="/index.html" data-link="scroll" data-block="#shop" class="footer__list-link">Каталог</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Service and advice</a>
+                            <a href="/certificates.html" class="footer__list-link">Сертификаты</a>
                         </li>
                         <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">F.A.Q.</a>
+                            <a href="/contacts.html" class="footer__list-link">Контакты</a>
                         </li>
                     </ul>
                 </div>
-                <div class="footer__column">
-                    <p class="footer__column-title">Navigate to</p>
-                    <ul class="footer__list">
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Bike Models</a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Webshop</a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Find Retailer</a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Privacy & Cookie info</a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">Terms & Conditions</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer__column">
-                    <p class="footer__column-title">Navigate to</p>
-                    <ul class="footer__list">
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">
-                                <i aria-hidden="true" class="fab fa-facebook"></i>
-                                Facebook
-                            </a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">
-                                <i aria-hidden="true" class="fab fa-instagram"></i>
-                                Instagram
-                            </a>
-                        </li>
-                        <li class="footer__list-item">
-                            <a href="#" class="footer__list-link">
-                                <i aria-hidden="true" class="fab fa-youtube"></i>
-                                Youtube
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+<!--                <div class="footer__column">-->
+<!--                    <p class="footer__column-title">Navigate to</p>-->
+<!--                    <ul class="footer__list">-->
+<!--                        <li class="footer__list-item">-->
+<!--                            <a href="#" class="footer__list-link">Bike Models</a>-->
+<!--                        </li>-->
+<!--                        <li class="footer__list-item">-->
+<!--                            <a href="#" class="footer__list-link">Webshop</a>-->
+<!--                        </li>-->
+<!--                        <li class="footer__list-item">-->
+<!--                            <a href="#" class="footer__list-link">Find Retailer</a>-->
+<!--                        </li>-->
+<!--                        <li class="footer__list-item">-->
+<!--                            <a href="#" class="footer__list-link">Privacy & Cookie info</a>-->
+<!--                        </li>-->
+<!--                        <li class="footer__list-item">-->
+<!--                            <a href="#" class="footer__list-link">Terms & Conditions</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--                <div class="footer__column">-->
+<!--                    <p class="footer__column-title">Navigate to</p>-->
+<!--                    <ul class="footer__list">-->
+<!--                        <li class="footer__list-item">-->
+<!--                            <a href="#" class="footer__list-link">-->
+<!--                                <i aria-hidden="true" class="fab fa-facebook"></i>-->
+<!--                                Facebook-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="footer__list-item">-->
+<!--                            <a href="#" class="footer__list-link">-->
+<!--                                <i aria-hidden="true" class="fab fa-instagram"></i>-->
+<!--                                Instagram-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="footer__list-item">-->
+<!--                            <a href="#" class="footer__list-link">-->
+<!--                                <i aria-hidden="true" class="fab fa-youtube"></i>-->
+<!--                                Youtube-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
             </div>
             <div class="footer__bottom">
                 <a href="#" class="header__logo">
@@ -403,11 +383,26 @@
                     </div>
                     <p class="lets">let’s blast!</p>
                 </a>
-                <p class="footer__copy">Copyright 2021 © All rights Reserved. Webdesign by RTJWEB.DK</p>
+                <p class="footer__copy">Copyright 2023 © All rights Reserved.</p>
             </div>
         </div>
     </div>
 </footer>
+    <div class="overlay" id="modal-callback">
+        <div class="modal-dialog">
+            <a href="#" data-close="#modal-callback" class="close">
+                <picture><source srcset="./img/close.webp" type="image/webp"><img src="./img/close.png" alt="close"></picture>
+            </a>
+            <form action="#" class="form-callback">
+                <p>Заказать товар</p>
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="Фамилия">
+                <input type="text" placeholder="Отчество">
+                <input type="text" placeholder="Телефон" data-input="masked">
+                <button type="submit">Заказать</button>
+            </form>
+        </div>
+    </div>
     <script src="js/app.min.js"></script>
 </body>
 </html>

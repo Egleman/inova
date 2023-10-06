@@ -3,6 +3,7 @@
 @import './components/accordion';
 @import './components/big-text';
 @import './components/footer';
+@import './components/modal';
 
 @import './blocks/banner';
 @import './blocks/media';
@@ -11,4 +12,6 @@
 @import './blocks/simple-block';
 @import './blocks/supplier';
 @import './blocks/video';
-@import '../../node_modules/swiper/swiper';
+@import './blocks/certificates';
+@import './blocks/contacts';
+//@import '../../node_modules/swiper/swiper';
