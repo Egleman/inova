@@ -40,7 +40,7 @@ export const calcWidthScroll = () => {
 export const openModal = () => {
     const buttons = document.querySelectorAll('[data-toggle]');
     const buttonsClose = document.querySelectorAll('[data-close]');
-
+    const html = document.querySelector('html');
     buttonsClose.forEach(close => {
         close.addEventListener('click', (e) => {
             e.preventDefault();
@@ -48,6 +48,8 @@ export const openModal = () => {
             overlays.forEach(over => {
                 if (over.classList.contains('overlay_active')) {
                     over.classList.remove('overlay_active')
+                    html.style.overflowY = 'initial';
+                    html.style.paddingRight = `0`;
                 }
             })
         })
@@ -62,6 +64,8 @@ export const openModal = () => {
             })
             let modal = btn.getAttribute('data-toggle');
             document.querySelector(`${modal}`).classList.add('overlay_active');
+            html.style.overflowY = 'hidden';
+            html.style.paddingRight = `${calcWidthScroll()}px`
         })
     })
 }
