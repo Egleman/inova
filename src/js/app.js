@@ -1,5 +1,6 @@
 import * as flsFunction from "./modules/function.js";
 import smoothscroll from 'smoothscroll-polyfill';
+import {zoom} from "./modules/function.js";
 // import {openModal, scrollLinks, sliders} from "./modules/function.js";
 const btn = document.querySelector('.header__burger');
 const acc = document.querySelector('.accordion');
@@ -11,6 +12,7 @@ flsFunction.scrollLinks();
 flsFunction.sliders();
 flsFunction.openModal();
 flsFunction.maskedInputs();
+flsFunction.zoom();
 smoothscroll.polyfill();
 
 btn.addEventListener('click', (e) => {

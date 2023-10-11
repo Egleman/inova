@@ -82,7 +82,7 @@ export const scrollLinks = () => {
                     block: 'start'
                 });
             } else {
-                window.location = link.getAttribute('href').slice(0, 1);
+                window.location = link.getAttribute('href');
             }
         })
     })
@@ -125,6 +125,23 @@ export const sliders = () => {
     }
 }
 
+export const zoom = () => {
+    const productImg = document.querySelector('.product__img');
+    if (productImg) {
+        productImg.addEventListener('mousemove', (e) => {
+            const zoomer = e.currentTarget;
+            let offsetX;
+            let offsetY;
+            let x;
+            let y;
+            e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+            e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+            x = offsetX/zoomer.offsetWidth*100
+            y = offsetY/zoomer.offsetHeight*100
+            zoomer.style.backgroundPosition = x + '% ' + y + '%';
+        })
+    }
+}
 export const maskedInputs = () => {
     if (document.querySelectorAll('input[data-input="masked"]')) {
         const inputs = document.querySelectorAll('input[data-input="masked"]');

@@ -629,6 +629,39 @@ button {
   background: #ff4343;
 }
 
+.breadcrumb {
+  padding: 50px 0;
+}
+
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.breadcrumb__list-link {
+  color: #767676;
+  font-size: 16px;
+  line-height: 16px;
+  transition: 0.3s all;
+}
+
+.breadcrumb__list-link:hover {
+  color: black;
+}
+
+.breadcrumb__list-text {
+  color: #767676;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.breadcrumb__list-separator {
+  color: #767676;
+  font-size: 16px;
+  line-height: 16px;
+}
+
 .banner__wrapper {
   display: flex;
   margin-bottom: 100px;
@@ -707,6 +740,15 @@ button {
 
 .banner__link_white:hover {
   background: #f4f4f4;
+}
+
+.banner__link_black {
+  background: #151515;
+  color: #fff;
+}
+
+.banner__link_black:hover {
+  background: #555555;
 }
 
 .banner__right {
@@ -1190,6 +1232,99 @@ button {
   background: #ff4343;
 }
 
+.product {
+  padding: 0 0 50px 0;
+}
+
+.product__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.no-webp .product__img {
+  background-image: url("../img/media-5.png"); }
+
+.product__img {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.product__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: opacity 0.5s;
+  display: block;
+}
+
+.product__img:hover img {
+  opacity: 0;
+}
+
+.product__thumbnails {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.product__thumbnails-img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.product__thumbnails-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.product__title {
+  font-size: 35px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product__description {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.product__link {
+  margin-bottom: 20px;
+}
+
+.product__options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product__options-list-item {
+  display: flex;
+  gap: 10px;
+}
+
+.product__options-list-item .circle {
+  width: 5px;
+  height: 5px;
+  background: black;
+  border-radius: 100%;
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.product__options-option {
+  font-size: 16px;
+}
+
 @media (max-width: 1230px) {
   .banner__left {
     max-width: 370px;
@@ -1593,3 +1728,5 @@ button {
     width: 100%;
   }
 }
+
+.webp .product__img { background-image: url(../img/media-5.webp); }

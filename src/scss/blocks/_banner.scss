@@ -74,6 +74,13 @@
         background: #f4f4f4;
       }
     }
+    &_black {
+      background: #151515;
+      color: #fff;
+      &:hover {
+        background: #555555;
+      }
+    }
   }
   &__right {
     width: 100%;

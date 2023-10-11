@@ -1,0 +1,27 @@
+.breadcrumb {
+  padding: 50px 0;
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    &-link {
+      color: #767676;
+      font-size: 16px;
+      line-height: 16px;
+      transition: .3s all;
+      &:hover {
+        color: black;
+      }
+    }
+    &-text {
+      color: #767676;
+      font-size: 16px;
+      line-height: 16px;
+    }
+    &-separator {
+      color: #767676;
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+}

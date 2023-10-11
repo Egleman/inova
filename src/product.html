@@ -1,0 +1,73 @@
+@@include('html/head.html', {
+"title": "Продукт"
+})
+<body>
+@@include('html/header.html', {})
+<main>
+    @@include('html/breadcrumb.html', {})
+    <section class="product">
+        <div class="container">
+            <div class="product__wrapper">
+                <div class="product__wrapper-left">
+                    <div class="product__img">
+                        <img src="./img/media-5.png" alt="media">
+                    </div>
+                    <div class="product__thumbnails">
+                        <div class="product__thumbnails-img">
+                            <img src="./img/media-1.png" alt="media">
+                        </div>
+                        <div class="product__thumbnails-img">
+                            <img src="./img/media-2.png" alt="media">
+                        </div>
+                        <div class="product__thumbnails-img">
+                            <img src="./img/media-3.png" alt="media">
+                        </div>
+                    </div>
+                </div>
+                <div class="product__wrapper-right">
+                    <div class="product__title">Чистящий материал UHDO для Мягкого Бластинга</div>
+                    <div class="product__description">
+                        Чистота и сохранность поверхностей - важные аспекты в различных отраслях, от судостроения
+                        до промышленности. Для достижения наилучших результатов в очистке поверхностей от
+                        различных видов загрязнений мы представляем вам чистящий материал UHDO.
+                    </div>
+                    <a href="#" class="banner__link banner__link_black product__link">ЗАКАЗАТЬ</a>
+                    <ul class="product__options-list">
+                        <li class="product__options-list-item">
+                            <div class="circle"></div>
+                            <p class="product__options-option">Деликатная очистка поверхностей</p>
+                        </li>
+                        <li class="product__options-list-item">
+                            <div class="circle"></div>
+                            <p class="product__options-option">Без повреждения поверхностей</p>
+                        </li>
+                        <li class="product__options-list-item">
+                            <div class="circle"></div>
+                            <p class="product__options-option">Реставрация зданий</p>
+                        </li>
+                        <li class="product__options-list-item">
+                            <div class="circle"></div>
+                            <p class="product__options-option">Ремонт фасадов зданий</p>
+                        </li>
+                        <li class="product__options-list-item">
+                            <div class="circle"></div>
+                            <p class="product__options-option">100% натуральный и экологически безопасный</p>
+                        </li>
+                        <li class="product__options-list-item">
+                            <div class="circle"></div>
+                            <p class="product__options-option">Отсутсвие вредных включений, пыли и примесей</p>
+                        </li>
+                        <li class="product__options-list-item">
+                            <div class="circle"></div>
+                            <p class="product__options-option">Материал разделён по фракциям - по размеру частиц 70мкр./ 130мкр./ 350мкр.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+@@include('html/footer.html', {})
+<script src="js/app.min.js"></script>
+</body>
+</html>
