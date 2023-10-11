@@ -1,0 +1,40 @@
+.tabs {
+    padding: 25px 0 50px 0;
+    &__wrapper {
+        border-bottom: 1px solid #e8e8e8;
+        display: flex;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #515151;
+        padding: 0 16px;
+        height: 42px;
+        border-top: 1px solid #e8e8e8;
+        border-right: 1px solid #e8e8e8;
+        border-left: 1px solid #e8e8e8;
+        background: #e8e8e8;
+    }
+    &__button.active {
+        background: #fff;
+    }
+    &__content {
+        padding: 20px;
+        box-sizing: border-box;
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        p {
+            font-size: 18px;
+            b {
+                font-weight: 600;
+            }
+        }
+    }
+    &__content.active {
+        display: flex;
+    }
+}

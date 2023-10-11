@@ -44,6 +44,7 @@
   "dependencies": {
     "accordion-js": "^3.3.4",
     "inputmask": "^5.0.8",
+    "js-image-zoom": "^0.7.0",
     "simplebar": "^5.3.9",
     "smooth-scrollbar": "^8.8.1",
     "smoothscroll-polyfill": "^0.4.4",

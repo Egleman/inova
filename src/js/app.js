@@ -13,6 +13,7 @@ flsFunction.sliders();
 flsFunction.openModal();
 flsFunction.maskedInputs();
 flsFunction.zoom();
+flsFunction.tabs();
 smoothscroll.polyfill();
 
 btn.addEventListener('click', (e) => {

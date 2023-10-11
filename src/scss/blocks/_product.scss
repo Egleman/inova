@@ -3,26 +3,58 @@
   &__wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 40px;
   }
   &__img {
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 10px;
+    // width: 100%;
+    // // height: 590px;
+    // overflow: hidden;
+    // margin-bottom: 10px;
     position: relative;
-    background-image: url('../img/media-5.png');
-    img {
+    // background-image: url('../img/media-5.png');
+    // background-repeat: no-repeat;
+    // background-size: 200%;
+    
+    .img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: opacity 0.5s;
-      display: block;
-    }
-    &:hover {
-      img {
-        opacity: 0;
+      // height: 590px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      position: relative;
+      background-image: url('../img/media-5.png');
+      background-repeat: no-repeat;
+      background-size: 200%;
+      .static {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.5s;
+        display: block;
+      }
+      &:hover {
+        .static {
+          opacity: 0;
+        }
       }
     }
+    .loop {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      background: #fff;
+      z-index: 5;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    
   }
   &__thumbnails {
     display: grid;
@@ -31,11 +63,15 @@
     &-img {
       width: 100%;
       overflow: hidden;
+      opacity: 0.5;
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
+    }
+    &-img.active {
+      opacity: 1;
     }
   }
   &__title {
@@ -52,13 +88,19 @@
   &__link {
     margin-bottom: 20px;
   }
+  &__advantages {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
   &__options-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding-left: 20px;
     &-item {
       display: flex;
-      gap: 10px;
+      gap: 15px;
       .circle {
         width: 5px;
         height: 5px;
@@ -72,5 +114,24 @@
   }
   &__options-option {
     font-size: 16px;
+  }
+}
+@media (max-width: 798px) {
+  .product {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    &__title {
+      text-align: left;
+    }
+  }
+}
+@media (max-width: 606px) {
+  .product {
+    &__title {
+      text-align: left;
+      font-size: 25px;
+    }
   }
 }
